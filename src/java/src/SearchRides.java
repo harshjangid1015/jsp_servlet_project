@@ -83,6 +83,8 @@ public class SearchRides extends HttpServlet {
 
                 String opt = request.getParameter("selected");
                 
+                System.out.println(opt);
+                
                 
                 if(opt.isEmpty()){
 			RequestDispatcher req = request.getRequestDispatcher("AvailableRides.jsp");

@@ -56,6 +56,7 @@ public final class AvailableRides_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("    </head>\n");
       out.write("    <body>\n");
       out.write("        <a href=\"Welcome.jsp\">Home</a>\n");
+      out.write("        <a href=\"Login.jsp\">Logout</a>\n");
       out.write("\t<br />\n");
       out.write("        <h1>Search all available or requested rides</h1>\n");
       out.write("         <br />\n");

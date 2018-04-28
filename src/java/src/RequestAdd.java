@@ -87,6 +87,14 @@ public class RequestAdd extends HttpServlet {
                 String seats = request.getParameter("seats");
                 String contact = request.getParameter("contact");
                 
+                System.out.println(name);
+                System.out.println(origin);
+                System.out.println(destination);
+                System.out.println(date);
+                System.out.println(time);
+                System.out.println(seats);
+                System.out.println(contact);
+                
                 if(name.isEmpty() || origin.isEmpty() || destination.isEmpty() || date.isEmpty() || time.isEmpty() || seats.isEmpty() || date.isEmpty() || contact.isEmpty()){
 			RequestDispatcher req = request.getRequestDispatcher("RequestRides.jsp");
 			req.include(request, response);

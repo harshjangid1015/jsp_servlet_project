@@ -99,6 +99,12 @@ public class RiderRegistration extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		String contact = request.getParameter("contact");
+                
+//                System.out.println(first_name);
+//                System.out.println(last_name);
+//                System.out.println(username);
+//                System.out.println(password);
+//                System.out.println(contact);
 		
 		if(first_name.isEmpty() || last_name.isEmpty() || username.isEmpty() || password.isEmpty() || contact.isEmpty()){
 			RequestDispatcher req = request.getRequestDispatcher("Register.jsp");

@@ -8,49 +8,69 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Request Ride Page</title>
+            
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="registercss.css">
+        <script
+                src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous"></script>
+                <script src="requestride.js"></script>
+                
     </head>
-    <body>
-        <h1>Fill the form to request a ride</h1>
-        <form action="RequestAdd" method="post">
-			<table style="with: 50%">
-				<tr>
-					<td>Name</td>
-					<td><input type="text" name="name" /></td>
-				</tr>
-				<tr>
-					<td>Origin</td>
-					<td><input type="text" name="origin" /></td>
-				</tr>
-				<tr>
-					<td>Destination</td>
-					<td><input type="text" name="destination" /></td>
-				</tr>
-				<tr>
-					<td>Date of Journey</td>
-					<td><input type="date"  name="date" /></td>
-				</tr>
-                                <tr>
-					<td>Time of Journey</td>
-					<td><input type="time"  name="time" /></td>
-				</tr>
-                                <tr>
-					<td>Seats Required</td>
-                                        <td><select name="seats">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        </select>
-                                        </td>
-				</tr>    
-				<tr>
-					<td>Contact No</td>
-					<td><input type="text" name="contact" /></td>
-				</tr>
-                        </table>
-			<input type="submit" value="Submit" />
-	</form>
-    </body>
-</html>
+<div class="container">
+    <div class="row">
+        <form class="col s12" action="RequestAdd" method="post">
+          <h4>Fill the form to request a ride</h4>
+          <div class="row">
+            <div class="input-field col s12">
+              <input name="name" type="text" class="validate" required>
+              <label for="name">Name</label>
+            </div>
+            <div class="input-field col s12">
+              <input name="origin" type="text" class="validate" required>
+              <label for="origin">Origin</label>
+            </div>
+            <div class="input-field col s12">
+                    <input name="destination" type="text" class="validate" required>
+                    <label for="destination">Destination</label>
+            </div>
+            <div class="input-field col s12">
+                    <input name="date" type="date" class="datepicker">
+                    <label for="date">Date of Journey</label>
+            </div>
+            <div class="input-field col s12"> 
+                    <input name="time" type="time" class="timepicker">
+                    <label for="time">Time of Journey</label>  
+            </div>
+            <div class="input-field col s12">
+                <select class = "browser-default" name="seats">
+                    <option value = "" disabled selected>Seats Required</option>
+                    <option value = "1">1</option>
+                    <option value = "2">2</option>
+                    <option value = "3">3</option>
+                    <option value = "3">4</option>
+                 </select> 
+            </div>
+            <div class="input-field col s12">
+                    <input name="contact" type="text" class="validate" required>
+                    <label for="contact">Contact No</label>
+            </div>
+            </div>            
+          </div>
+          <div class="row">
+            
+    
+            <div class="input-field col s6">
+              <button class="btn btn-large btn-register waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">done</i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <a title="Login" class="ngl btn-floating btn-large waves-effect waves-light red"><i class="material-icons">input</i></a>
+    </div>
+</html> 
