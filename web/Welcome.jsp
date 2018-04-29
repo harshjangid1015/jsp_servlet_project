@@ -3,7 +3,16 @@
     Created on : Apr 26, 2018, 9:18:54 PM
     Author     : harsh
 --%>
-
+<%@ page import = "java.io.*,java.util.*" %>
+<%
+    HttpSession session2 = request.getSession();
+    String user_id = ""+request.getSession().getAttribute("user_id");
+    if (null != user_id && !user_id.isEmpty()) {
+        
+    } else {
+        response.sendRedirect("Login.jsp");
+    }
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

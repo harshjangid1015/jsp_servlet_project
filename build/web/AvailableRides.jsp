@@ -32,7 +32,7 @@
                 <button class="btn waves-effect waves-light" onclick=location.href="Welcome.jsp" type="submit" name="action">Home
                     <i class="material-icons right">send</i>
                 </button>
-                <button class="btn waves-effect waves-light" onclick=location.href="Login.jsp" type="submit" name="action">Logout
+                <button class="btn waves-effect waves-light" onclick=location.href="Logout.jsp" type="submit" name="action">Logout
                     <i class="material-icons right">send</i>
                 </button>
                 <h4>Search all available rides</h4>
