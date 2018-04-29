@@ -13,7 +13,7 @@ public class RideObject {
 
     public RideObject() {
     }
-
+    
     public String getName() {
         return name;
     }
@@ -69,7 +69,26 @@ public class RideObject {
     public void setContact(String contact) {
         this.contact = contact;
     }
-    
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+
+       
+    String id;
     String name;
     String origin; 
     String destination; 
@@ -77,6 +96,6 @@ public class RideObject {
     String time;
     String seats ;
     String contact; 
-    
+    String status;
     
 }

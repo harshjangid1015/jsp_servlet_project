@@ -53,6 +53,7 @@
                     </button>
                 </div>
             </form>
+            
             <div class="input-field col s6">
                 <table class = "striped bordered">
                     <thead>
@@ -64,6 +65,7 @@
                             <th>Time</th>
                             <th>Seats</th>
                             <th>Contacts</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     
@@ -85,6 +87,22 @@
                             <td><%out.println(rideObject.getTime());%></td>
                             <td><%out.println(rideObject.getSeats());%></td>
                             <td><%out.println(rideObject.getContact());%></td>
+                            <td>
+                                
+                               <%
+                                
+                                    if (!rideObject.getStatus().equals("booked")&& !rideObject.getStatus().equals("request")) {
+                                %>
+                                <form action="SearchRides" method="post">
+                                    <input type="hidden"  name="ride_id" id="ride_id" value="<%out.println(rideObject.getId());%>" />
+                                    <input type="submit" class="btn" name="bookride" id="bookride" value="Book Ride" />
+                                </form>
+                                <%
+                                    } else {
+                                      out.println(rideObject.getStatus().toUpperCase());
+                                    }
+                                %>
+                            </td>
                         </tr>
                         <%
 //                                  out.println(rideObject.getName());

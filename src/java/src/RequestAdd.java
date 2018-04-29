@@ -106,7 +106,7 @@ public class RequestAdd extends HttpServlet {
                         // Establish a connection
 			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/share_ride", "root", "root");
                         
-                        PreparedStatement preparedStatement = connection.prepareStatement("insert into share_ride.requested_rides (name, origin, destination, date, time, seats, contact) " + "values (?, ?, ?, ?, ?, ?, ?)");
+                        PreparedStatement preparedStatement = connection.prepareStatement("insert into share_ride.available_rides (name, origin, destination, date, time, seats, contact,status) " + "values (?, ?, ?, ?, ?, ?,?, ?)");
 					preparedStatement.setString(1, name);
 					preparedStatement.setString(2, origin);
                                         preparedStatement.setString(3, destination);
@@ -114,6 +114,7 @@ public class RequestAdd extends HttpServlet {
                                         preparedStatement.setString(5, time);
                                         preparedStatement.setString(6, seats);
                                         preparedStatement.setString(7, contact);
+                                        preparedStatement.setString(8, "request");
 					preparedStatement.executeUpdate();
                                         
                                  connection.close();       
